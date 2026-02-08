@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ai-summarizer-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements-simple.txt"
+    startCommand: "python main_fixed.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.14"
+    healthCheckPath: "/health"
+    autoDeploy: true
