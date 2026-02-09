@@ -17,7 +17,7 @@ app = FastAPI(
 # CORS middleware - Fixed to include port 3002
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://frontend-lemon-xi-20.vercel.app", "https://localhost:3000", "https://localhost:3001", "https://localhost:3002", "http://localhost:3000", "http://localhost:3001", "http://localhost:3002", "http://127.0.0.1:3000", "http://127.0.0.1:3001", "http://127.0.0.1:3002"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],

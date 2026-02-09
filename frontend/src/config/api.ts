@@ -4,9 +4,9 @@ export const API_CONFIG = {
   development: {
     apiUrl: 'http://localhost:8000'
   },
-  // Production - Update this with your Render URL
+  // Production
   production: {
-    apiUrl: 'https://your-render-url.onrender.com'
+    apiUrl: 'https://ai-text-summarizer-c3nb.onrender.com'
   }
 }
 
