@@ -1,50 +1,74 @@
+<div align="center">
+
 # 🧠 AI Text Summarizer
 
-An advanced AI-powered text summarization application built with Next.js frontend and FastAPI backend. Supports multiple AI models, file uploads, and various export formats.
+### Transform Long Text into Clear, Concise Summaries
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20App-blue?style=for-the-badge&logo=vercel)](https://frontend-lemon-xi-20.vercel.app)
+[![API](https://img.shields.io/badge/API-Live%20on%20Render-green?style=for-the-badge&logo=render)](https://ai-text-summarizer-c3nb.onrender.com)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind%20CSS-4.0-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+An advanced AI-powered text summarization application built with **Next.js** frontend and **FastAPI** backend. Supports multiple AI models, file uploads, and various export formats.
+
+</div>
+
+---
+
+## 📸 Screenshots
+
+### Homepage
+![AI Text Summarizer - Homepage](assets/image.png)
+
+### Summarization in Action
+![AI Text Summarizer - Summarization Result](assets/image_1.png)
+
+---
 
 ## ✨ Features
 
 ### 🚀 Core Functionality
-- **Multiple AI Models**: BART, T5, PEGASUS, OpenAI GPT, Cohere
-- **Summarization Methods**: Extractive, Abstractive, and Hybrid approaches
-- **File Support**: PDF, DOCX, TXT file uploads with text extraction
-- **Export Options**: PDF, DOCX, TXT, CSV formats
-- **Real-time Processing**: Fast and efficient text processing
+- **Multiple AI Models** — BART, T5, PEGASUS, OpenAI GPT, Cohere
+- **Summarization Methods** — Extractive, Abstractive, and Hybrid approaches
+- **File Support** — PDF, DOCX, TXT file uploads with text extraction
+- **Export Options** — PDF, DOCX, TXT, CSV formats
+- **Real-time Processing** — Fast and efficient text processing
 
 ### 🎨 User Experience
-- **Modern UI**: Clean, responsive interface built with Tailwind CSS
-- **Interactive Dashboard**: Real-time statistics and quality indicators
-- **Batch Processing**: Summarize multiple texts simultaneously
-- **Quality Metrics**: Compression ratio, processing time, readability scores
+- **Modern UI** — Clean, responsive interface built with Tailwind CSS
+- **Interactive Dashboard** — Real-time statistics and quality indicators
+- **Batch Processing** — Summarize multiple texts simultaneously
+- **Quality Metrics** — Compression ratio, processing time, readability scores
 
 ### 🔧 Technical Features
-- **RESTful API**: Well-documented FastAPI backend
-- **TypeScript**: Type-safe frontend development
-- **Authentication**: JWT-based user authentication
-- **Database**: SQLAlchemy with SQLite support
-- **Error Handling**: Comprehensive error management
+- **RESTful API** — Well-documented FastAPI backend with Swagger UI
+- **TypeScript** — Type-safe frontend development
+- **Authentication** — JWT-based user authentication
+- **Database** — SQLAlchemy with SQLite support
+- **Error Handling** — Comprehensive error management
+
+---
 
 ## 🛠️ Technology Stack
 
-### Frontend
-- **Next.js 14**: React framework with App Router
-- **TypeScript**: Type-safe JavaScript
-- **Tailwind CSS**: Utility-first CSS framework
-- **Lucide React**: Beautiful icon library
+<div align="center">
 
-### Backend
-- **FastAPI**: Modern Python web framework
-- **Transformers**: Hugging Face AI models
-- **SQLAlchemy**: Python SQL toolkit
-- **PyPDF2 & python-docx**: Document processing
-- **ReportLab**: PDF generation
+| Layer | Technology | Description |
+|-------|-----------|-------------|
+| **Frontend** | Next.js 16, React 19, TypeScript | Modern React framework with App Router |
+| **Styling** | Tailwind CSS 4, Lucide Icons | Utility-first CSS with beautiful icons |
+| **Backend** | FastAPI, Python, Uvicorn | High-performance async Python API |
+| **AI/ML** | Transformers, BART, T5, PEGASUS | Hugging Face models for summarization |
+| **Database** | SQLAlchemy, SQLite | Lightweight ORM with SQL support |
+| **Auth** | JWT, Passlib, Bcrypt | Secure token-based authentication |
+| **File Processing** | PyPDF2, python-docx, ReportLab | PDF, DOCX read/write support |
+| **Deployment** | Vercel (Frontend), Render (Backend) | Free cloud hosting |
 
-### AI/ML
-- **BART**: Facebook's abstractive summarization model
-- **T5**: Google's text-to-text transformer
-- **PEGASUS**: Google's long-document summarizer
-- **OpenAI GPT**: Premium language model
-- **Cohere**: Business-focused AI model
+</div>
 
 ## 🚀 Quick Start
 
@@ -367,20 +391,35 @@ The application automatically downloads and configures AI models on first run. F
 3. **Model Selection**: Choose models based on your use case
 4. **API Limits**: Configure rate limiting for external APIs
 
+## 🌐 Live Demo
+
+| Service | URL | Status |
+|---------|-----|--------|
+| **Frontend** | [frontend-lemon-xi-20.vercel.app](https://frontend-lemon-xi-20.vercel.app) | ✅ Live |
+| **Backend API** | [ai-text-summarizer-c3nb.onrender.com](https://ai-text-summarizer-c3nb.onrender.com) | ✅ Live |
+| **API Docs** | [ai-text-summarizer-c3nb.onrender.com/docs](https://ai-text-summarizer-c3nb.onrender.com/docs) | ✅ Live |
+
+> **Note:** The Render free tier spins down after inactivity. The first request may take ~30 seconds to wake up.
+
+---
+
 ## 🚀 Deployment
 
-### Docker Deployment
-
-1. **Build Docker images**
+### Frontend — Vercel
 ```bash
-# Backend
-docker build -t ai-summarizer-backend ./backend
-
-# Frontend
-docker build -t ai-summarizer-frontend ./frontend
+cd frontend
+npm install -g vercel
+vercel --prod
 ```
 
-2. **Docker Compose**
+### Backend — Render
+1. Connect your GitHub repo on [render.com](https://render.com)
+2. Set **Root Directory** to `backend`
+3. Set **Build Command** to `pip install -r requirements-simple.txt`
+4. Set **Start Command** to `python main_fixed.py`
+5. Add env variable: `PYTHON_VERSION` = `3.11.7`
+
+### Docker Deployment (Optional)
 ```yaml
 version: '3.8'
 services:
@@ -401,24 +440,7 @@ services:
       - backend
 ```
 
-### Cloud Deployment
-
-#### Vercel (Frontend)
-```bash
-cd frontend
-vercel --prod
-```
-
-#### Railway/Heroku (Backend)
-```bash
-cd backend
-# Deploy to Railway
-railway up
-
-# Or Heroku
-heroku create your-app-name
-git push heroku main
-```
+---
 
 ## 🤝 Contributing
 
@@ -434,19 +456,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Hugging Face for the amazing Transformers library
-- OpenAI for the GPT API
-- Cohere for their powerful language models
-- FastAPI team for the excellent web framework
-- Next.js team for the React framework
-
-## 📞 Support
-
-For support and questions:
-- Create an issue on GitHub
-- Check the [API documentation](http://localhost:8000/docs)
-- Review the [testing guide](#-testing-guide)
+- [Hugging Face](https://huggingface.co/) — Transformers library
+- [OpenAI](https://openai.com/) — GPT API
+- [Cohere](https://cohere.com/) — Language models
+- [FastAPI](https://fastapi.tiangolo.com/) — Python web framework
+- [Next.js](https://nextjs.org/) — React framework
+- [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS
+- [Vercel](https://vercel.com/) — Frontend hosting
+- [Render](https://render.com/) — Backend hosting
 
 ---
 
-**Built with ❤️ by Kishore | Full-Stack Developer & AI Enthusiast**
+<div align="center">
+
+**Built with ❤️ by [Kishore](https://github.com/kishore2797)**
+
+Full-Stack Developer & AI Enthusiast
+
+[![GitHub](https://img.shields.io/badge/GitHub-kishore2797-181717?style=for-the-badge&logo=github)](https://github.com/kishore2797)
+
+</div>
