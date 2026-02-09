@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
+import { Upload, FileText, Send, Download, Settings } from 'lucide-react'
+import { API_BASE_URL } from '../config/api'
 import SummarizerForm from '@/components/SummarizerForm'
 import SummaryResult from '@/components/SummaryResult'
 import { Brain, Sparkles, Zap, Shield } from 'lucide-react'
@@ -31,7 +33,7 @@ export default function Home() {
   const handleSummarize = async (request: SummarizationRequest) => {
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:8000/api/v1/summarize/summarize', {
+      const response = await fetch(`${API_BASE_URL}/api/v1/summarize/summarize`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +59,7 @@ export default function Home() {
     if (!result) return
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/export/export', {
+      const response = await fetch(`${API_BASE_URL}/api/v1/export/export`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
