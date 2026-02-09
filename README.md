@@ -29,6 +29,18 @@ An advanced AI-powered text summarization application built with **Next.js** fro
 
 ---
 
+## 🌐 Live Demo
+
+| Service | URL | Status |
+|---------|-----|--------|
+| **Frontend** | [frontend-lemon-xi-20.vercel.app](https://frontend-lemon-xi-20.vercel.app) | ✅ Live |
+| **Backend API** | [ai-text-summarizer-c3nb.onrender.com](https://ai-text-summarizer-c3nb.onrender.com) | ✅ Live |
+| **API Docs** | [ai-text-summarizer-c3nb.onrender.com/docs](https://ai-text-summarizer-c3nb.onrender.com/docs) | ✅ Live |
+
+> **Note:** The Render free tier spins down after inactivity. The first request may take ~30 seconds to wake up.
+
+---
+
 ## ✨ Features
 
 ### 🚀 Core Functionality
@@ -390,18 +402,6 @@ The application automatically downloads and configures AI models on first run. F
 2. **GPU Support**: Configure CUDA for accelerated processing
 3. **Model Selection**: Choose models based on your use case
 4. **API Limits**: Configure rate limiting for external APIs
-
-## 🌐 Live Demo
-
-| Service | URL | Status |
-|---------|-----|--------|
-| **Frontend** | [frontend-lemon-xi-20.vercel.app](https://frontend-lemon-xi-20.vercel.app) | ✅ Live |
-| **Backend API** | [ai-text-summarizer-c3nb.onrender.com](https://ai-text-summarizer-c3nb.onrender.com) | ✅ Live |
-| **API Docs** | [ai-text-summarizer-c3nb.onrender.com/docs](https://ai-text-summarizer-c3nb.onrender.com/docs) | ✅ Live |
-
-> **Note:** The Render free tier spins down after inactivity. The first request may take ~30 seconds to wake up.
-
----
 
 ## 🚀 Deployment
 
