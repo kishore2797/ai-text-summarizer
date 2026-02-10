@@ -59,15 +59,6 @@ class SummarizationResult(BaseModel):
     compression_ratio: float
     processing_time: float
 
-        "version": "1.0.0",
-        "docs": "/docs",
-        "health": "/health"
-    }
-
-@app.get("/health")
-async def health_check():
-    return {"status": "healthy", "service": "ai-summarizer"}
-
 @app.post("/api/v1/summarize/summarize", response_model=SummarizationResult)
 async def summarize_text(request: SummarizationRequest):
     """
